@@ -1,6 +1,6 @@
 {
   "name": "@coollaboratory/rabik-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "type": "module",
 	"main": "./index.js",
@@ -17,7 +17,12 @@
   "peerDependencies": {
     "svelte": "^4.2.8"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "svelte", "rabik ui"
+  ],
+  "author": {
+    "name": "Cool Laboratory",
+    "email": "cool.lab.gr@gmail.com"
+  },
   "license": "MIT"
 }
