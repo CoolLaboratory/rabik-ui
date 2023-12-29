@@ -1,28 +1,30 @@
 {
   "name": "@coollaboratory/rabik-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
-  "type": "module",
-	"main": "./index.js",
-	"module": "./index.js",
-	"svelte": "./index.js",
-  "types": "./index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
-  "files": ["./components/**"],
-  "exports": {
-    ".": "./"
-  },
-  "peerDependencies": {
-    "svelte": "^4.2.8"
-  },
   "keywords": [
-    "svelte", "rabik ui"
+    "svelte",
+    "rabik ui"
   ],
   "author": {
     "name": "Cool Laboratory",
     "email": "cool.lab.gr@gmail.com"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "files": [
+    "./css/global.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "svelte": "./index.js"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^4.2.8"
+  },
+  "type": "module",
   "license": "MIT"
 }
