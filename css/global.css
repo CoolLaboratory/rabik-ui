@@ -1,0 +1,79 @@
+@layer base, utils, components, typography;
+
+@import url('_base.css') layer(base);
+@import url('_utils.css') layer(utils);
+@import url('_theme.css') layer(theme);
+@import url('_typography.css') layer(typography);
+
+@import url('components/_components.css') layer(components);
+
+.bg-white {
+  background-color: white;
+}
+.bg-canvas {
+  background-color: var(--md-sys-color-background, Canvas);
+}
+
+.min-h-screen {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+}
+
+
+/** 
+
+AccentColor
+Background of accented user interface controls
+
+AccentColorText
+Text of accented user interface controls
+
+
+ButtonBorder
+Base border color of controls
+
+ButtonFace
+Background color of controls
+
+ButtonText
+Text color of controls
+
+Canvas
+Background of application content or documents
+
+CanvasText
+Text color in application content or documents
+
+Field
+Background of input fields
+
+FieldText
+Text in input fields
+
+GrayText
+Text color for disabled items (e.g. a disabled control)
+
+Highlight
+Background of selected items
+
+HighlightText
+Text color of selected items
+
+
+LinkText
+Text of non-active, non-visited links
+
+ActiveText
+Text of active links
+
+VisitedText
+Text of visited links
+
+Mark
+Background of text that has been specially marked (such as by the HTML mark element)
+
+MarkText
+Text that has been specially marked (such as by the HTML mark element)
+
+
+**/

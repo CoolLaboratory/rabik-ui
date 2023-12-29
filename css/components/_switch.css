@@ -1,0 +1,40 @@
+.switch {
+  --handle-size: 20px;
+  position: relative;
+  width: 52px;
+  height: 32px;
+
+  > .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background-color: #ccc;
+    border: 2px solid transparent;
+    transition: .4s;
+    border-radius: 25px;
+    cursor: pointer;
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: var(--handle-size, 20px);
+      width: var(--handle-size, 20px);
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: inherit;
+      transition: .4s;
+    }
+  }
+
+
+  > input { width: 0; height: 0; opacity: 0; }
+  > input:checked + .slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+  }
+}

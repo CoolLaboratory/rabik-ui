@@ -1,0 +1,82 @@
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: 
+      "rails topBar" 
+      "rails content";
+
+  min-block-size: 100dvh;
+
+  & .navigation-bar { 
+    grid-area: rails; 
+    position: sticky;
+    top: 0;
+    max-block-size: 100vh;
+    background-color: var(--md-sys-color-background, Canvas);
+    border-right: 1px solid ButtonBorder;
+    z-index: 10;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "top"
+        "center"
+        "bottom";
+
+
+    & nav {
+      display: grid;
+      gap: 16px;
+      inline-size: fit-content;
+      margin: 16px auto 0;
+    }
+
+  }
+
+  & .top-app-bar { 
+    position: sticky;
+    grid-area: topBar;
+    top: 0;
+    background-color: var(--md-sys-color-background, Canvas);
+    z-index: 10;
+  }
+
+  & .main-content-container { 
+    grid-area: content; 
+    z-index: 0;
+  }
+
+
+  /** Tablet and smaller... **/
+  @media (width < 600px) {
+    & {
+      grid-template-columns: 1fr;
+      grid-template-rows: 64px 1fr 80px;
+      grid-template-areas: 
+        "topBar" 
+        "content" 
+        "navBar";
+    }
+    & .navigation-bar {  
+      grid-area: navBar;
+      top: unset;
+      bottom: 0;
+      border-top: 1px solid ButtonBorder; 
+      border-right: none; 
+  
+
+      & nav {
+        display: flex;
+        gap: 16px;
+        justify-content: space-evenly;
+        inline-size: 100%;
+      }
+    }
+  }
+}
+
+:root:has(.main-content-container[style^="animation:"]) {
+  overflow-x: hidden;
+}

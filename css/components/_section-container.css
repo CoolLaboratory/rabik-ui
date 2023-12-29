@@ -1,0 +1,53 @@
+.section-container  {
+
+  container-type: inline-size;
+  container-name: sectionContainer;
+  z-index: 0;
+
+  > section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "stack";
+
+    > .section-aside {
+      grid-area: stack;
+      position: sticky;
+      top: 60px;
+      max-block-size: calc(100vh - 60px); /* Header Height */
+      max-block-size: calc(100dvh - 60px); /* Header Height */
+    
+      transition: transform .3s ease;
+      transform: translateX(-100%);
+
+      &.open { transform: translateX(0); }
+    }
+  
+    > .section-content {
+        grid-area: stack;
+    }
+  }
+
+
+
+
+  
+}
+
+@container sectionContainer (width > 600px) {
+  .section-container > section {
+    grid-template-columns: 180px 1fr;
+    grid-template-areas: "aside content";
+
+    > .section-aside {
+      grid-area: aside;
+      transform: translateX(0)
+    }
+    
+    > .section-content { 
+      grid-area: content; 
+      max-inline-size: 1024px;
+      inline-size: 100%;
+      margin-inline: auto;
+    }
+  }
+}
