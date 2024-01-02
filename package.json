@@ -7,8 +7,7 @@
     "rabik ui"
   ],
   "author": {
-    "name": "Cool Laboratory",
-    "email": "cool.lab.gr@gmail.com"
+    "name": "Cool Laboratory <cool.lab.gr@gmail.com>"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
