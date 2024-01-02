@@ -1,0 +1,65 @@
+.date-picker {
+
+  max-inline-size: 316px;
+  background-color: Field;
+  border: 1px solid ButtonBorder;
+  border-radius: .5rem;
+  padding: .5rem;
+
+
+  >header section.toolbar {
+    display: inline-flex;
+    align-items: center;
+    inline-size: 100%;
+    & span { flex: 1; text-align: center; }
+  }
+  >header section.days {
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    inline-size: 100%;
+    color: GrayText;
+  }
+
+  >main {
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    inline-size: 100%;
+  }
+
+  button {
+    position: relative;
+    inline-size: 40px;
+    block-size: 40px;
+    background-color: Field;
+    border: none;
+    border-radius: .5rem;
+    overflow: hidden;
+    padding: 0;
+
+    &:not([disabled]):hover {
+      background-color: ButtonFace;
+      cursor: pointer;
+    }
+
+    &.today {
+      color: VisitedText;
+
+      &:active { color: CANVAS; }
+    }
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      inset: 0;
+      
+    }
+    &:hover::before {
+      background-color: rgba(0, 0, 0, 0.123);
+    }
+    &:active::before {
+      background-color: rgba(0, 0, 0, 0.18);
+    }
+  }
+
+}

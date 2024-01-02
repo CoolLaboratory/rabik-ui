@@ -13,18 +13,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "files": [
-    "./css/global.css"
-  ],
   "exports": {
     ".": {
       "types": "./index.d.ts",
       "svelte": "./index.js"
-    }
+    },
+    "./global.css": "./css/global.css"
   },
   "peerDependencies": {
     "svelte": "^4.2.8"
   },
   "type": "module",
+  "svelte": "./index.js",
   "license": "MIT"
 }
