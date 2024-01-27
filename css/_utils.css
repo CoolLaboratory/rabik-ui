@@ -7,7 +7,7 @@
   &.top { top: 0; }
   &.left { left: 0; }
 }
-.sticky{
+.sticky {
   position: sticky; 
   &.top-60 { top: 60px; }
 
@@ -171,15 +171,7 @@
   --sys-border-color: #000;
 }
 
-:root {
-  /* --text-color: #fffa;
 
-  --border-width: 1px;
-  --border-color-rgb: rgb(from var(--sys-border-color) r g b / alpha);
-  --border-color-opacity: 1;
-
-  --border-color: rgb(from var(--border-color-rgb, 0 0 0) r g b / var(--border-color-opacity, alpha)) */
-}
 
 
 .border {
@@ -210,3 +202,4 @@
 .z-3 { z-index: 30; }
 .-z { z-index: -1; }
 /* #endregion */
+

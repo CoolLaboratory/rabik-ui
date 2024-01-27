@@ -19,6 +19,9 @@
   min-block-size: 100dvh;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
 
 /** 
 
